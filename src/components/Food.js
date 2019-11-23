@@ -1,21 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Buffet extends Component {
-
-  render() {
+const Buffet = ({ food, customAction }) => {
 
     return (
       <div className="col col-md-2">
-        <div className="card">
+        <div className="card" onClick={() => customAction(food)}>
           {/* IMAGE BELOW */}
-          <img className="card-img-top" />
+          <img className="card-img-top" src={food.image} alt="" />
           <div className="card-body">
-            <p>NAME OF FOOD</p>
+            <p>{food.name}</p>
+            <p className="food-calories">{food.calories} calories</p> {/* BONUS */}
           </div>
         </div>
       </div>
     );
-  }
-}
+
+};
 
 export default Buffet;

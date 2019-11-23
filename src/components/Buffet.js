@@ -1,21 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import Food from "./Food";
 
-class Buffet extends Component {
-  //this.props.addFoodToPlate = function prop from App
+const Buffet = ({ buffetFood, addFoodToPlate }) => {
 
-  displayBuffet = () => {
-    //DISPLAY FOOD HERE
-  };
+  const displayBuffet = () => (
+    buffetFood.map(food => <Food food={food} customAction={addFoodToPlate} key={food.name} />)
+  );
 
-  render() {
-    return (
-      <div className="container jumbotron">
-        <h4>BUFFET CONTENTS</h4>
-        <div className="row">{this.displayBuffet()}</div>
-      </div>
-    );
-  }
+  return (
+    <div className="container jumbotron">
+      <h4>BUFFET CONTENTS</h4>
+      <div className="row">{displayBuffet()}</div>
+    </div>
+  );
 }
 
 export default Buffet;

@@ -1,16 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
 import Food from "./Food";
 
-class Plate extends Component {
+const Plate = ({ plateFood, eatFood }) => {
 
-  render() {
+  const displayFood = () => {
     return (
-      <div className="container jumbotron">
-        <h4>PLATE CONTENTS</h4>
-        <div className="row"></div>
-      </div>
-    );
-  }
-}
+      plateFood.map(food => <Food food={food} customAction={eatFood} key={`${food.name}${Math.random()}`} />)
+    )
+  };
+
+  // BONUS
+  const calculateCalories = () => plateFood.reduce((total, food) => total + food.calories, 0);
+
+  return (
+    <div className="container jumbotron">
+      <h4>PLATE CONTENTS</h4>
+      {/* BONUS */}
+      <div className="calories">Total calories: {calculateCalories()}</div>
+      <div className="row">{displayFood()}</div>
+    </div>
+  );
+};
 
 export default Plate;
