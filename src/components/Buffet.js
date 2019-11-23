@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Food from "./Food";
 
 class Buffet extends Component {
-  //this.props.addFoodToPlate = function prop from App
 
   displayBuffet = () => {
     //DISPLAY FOOD HERE
