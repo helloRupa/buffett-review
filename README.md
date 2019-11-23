@@ -65,3 +65,5 @@ This component is presentational and displays information about food. Needs to d
 - Should this be a functional or class component?
 - Which bits of state do I need to pass around? 
 - Do I need to pass any functions around as props?
+
+[Demo video of fully working app with bonus feature](https://youtu.be/QEY9508Kiks)
