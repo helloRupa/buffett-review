@@ -5,10 +5,6 @@ import Plate from "./components/Plate";
 import FOOD_ITEMS from "./FOOD.js";
 
 class App extends Component {
-  state = {
-    buffetFood: FOOD_ITEMS.food, //this resolves to an array of objects with "name" and "image" props
-    plateFood: []
-  };
 
   render() {
     return (
