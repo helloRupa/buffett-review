@@ -6,15 +6,15 @@ Let's practice our React skills by building an applicaion that mimics the behavi
 - Increase our React coding confidence
 - Feel prepared for the Code Challenge tomorrow
 
-## Quiz Question
-Where in the component lifecycle do we normally, though not always, make fetch requests?
-
 ## Topics We'll Cover
 - Creating and updating state
 - Passing props around
 - Functional vs. class components
 - Code structure and efficiency: are we managing state in the right places and using the right types of components
 - Rendering: Are we able to meet the MVP and see our food items in the right places
+
+## Quiz Question
+Where in the component lifecycle do we normally, though not always, make fetch requests?
 
 ## MVP User Stories
 A user can: 
