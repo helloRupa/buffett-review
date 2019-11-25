@@ -17,19 +17,20 @@ class App extends Component {
 
   // get food on that plate!
   addFoodToPlate = (food) => {
-    const myFood = [...this.state.plateFood];
+    this.setState(prevState => {
+      const foodCopy = { ...food };
 
-    myFood.push(food);
-    this.setState({ plateFood: myFood });
+      foodCopy.id = prevState.plateFood.length + 1;
+
+      return { plateFood: prevState.plateFood.concat(foodCopy) };
+    });
   }
 
   // remove food from plate
   eatFood = (eatenFood) => {
-    const myFood = [...this.state.plateFood];
-    const eatenIndex = myFood.findIndex(food => food === eatenFood);
-
-    myFood.splice(eatenIndex, 1);
-    this.setState({ plateFood: myFood });
+    this.setState(prevState => ({
+      plateFood: prevState.plateFood.filter(food => food !== eatenFood)
+    }));
   }
 
   render() {
