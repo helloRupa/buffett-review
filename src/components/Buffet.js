@@ -3,9 +3,13 @@ import Food from "./Food";
 
 class Buffet extends Component {
 
-  displayBuffet = () => {
+  displayBuffet = () => (
     //DISPLAY FOOD HERE
-  };
+
+    this.props.food.map(item => (
+      <Food key={item.name} item={item} handleFood={this.props.updatePlateItems} />
+    ))
+  );
 
   render() {
     return (
